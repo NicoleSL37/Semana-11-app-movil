@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -e
+ecAPK_NAME="mi-app-debug.apk"
+echo "Proyecto actual: $PROJECT_DIR"
+echo "1. Instalando dependencias npm..."
+npm install
+echo "2. Compilando proyecto..."
+npm run build
