@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+//Se agrego esta linea
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,8 @@ export class HomePage {
   tipoApp: string = '';
   mensaje: string = '';
   registroValido: boolean = false;
-  constructor() { }
+  //Se agrego esta linea
+  constructor(private router: Router) {}
 
   validarRegistro() {
     const correoValido =
@@ -40,4 +43,12 @@ export class HomePage {
     this.mensaje = '';
     this.registroValido = false;
   }
+
+  //Se agrego esta función
+  irADetalle() {
+    this.router.navigate(['/detalle'], {
+      queryParams: { tipo: this.tipoApp }
+    });
+  }
+
 }

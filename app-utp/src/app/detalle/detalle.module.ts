@@ -7,14 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { DetallePageRoutingModule } from './detalle-routing.module';
 
 import { DetallePage } from './detalle.page';
+import { ResumenAppComponent } from '../components/resumen-app/resumen-app.component';
+import { SelectorTipoComponent } from
+'../components/selector-tipo/selector-tipo.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DetallePageRoutingModule
+    DetallePageRoutingModule,
+    ResumenAppComponent
   ],
-  declarations: [DetallePage]
+  declarations: [DetallePage, SelectorTipoComponent]
 })
 export class DetallePageModule {}

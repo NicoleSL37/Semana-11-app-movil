@@ -38,6 +38,10 @@
       Limpiar
     </ion-button>
 
+    <ion-button expand="block" color="danger" (click)="irADetalle()">
+      Continuar al detalle
+    </ion-button>
+
     <ion-card *ngIf="mensaje" [class.card-ok]="registroValido" [class.card-error]="!registroValido">
       <ion-card-header>
         <ion-card-title>
